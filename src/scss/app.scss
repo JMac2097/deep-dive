@@ -1,16 +1,40 @@
 @import 'palette';
 
-
-$black: #000000;
-
 body {
     background-color: $color3;
+}
+
+#head-container {
+    background-color: $color3;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    margin: auto;
+    width: 100%;
+    transition: all 0.5s ease-in-out;
+    &.scrolled {
+        background-color: $color3-transparent;
+    }
 }
 
 .main-logo {
     height: 100px;
     box-shadow: 4px 4px 4px $color4;
 
+}
+
+#front-page-wrapper {
+    margin-top: 125px;
+    min-height: 500px;
+    background-color: $color4;
+}
+
+#info-wrapper {
+    min-height: 500px;
+    background-color: $color2;
+    &.scrolled {
+        background-color: $color4;
+    }
 }
 
 
