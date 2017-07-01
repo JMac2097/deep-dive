@@ -12,21 +12,47 @@ body {
     margin: auto;
     width: 100%;
     transition: all 0.5s ease-in-out;
+    .main-logo {
+        transition: all 0.5s ease-in-out;
+        height: 100px;
+        box-shadow: 4px 4px 4px $color4;
+    }
     &.scrolled {
         background-color: $color3-transparent;
+        .main-logo {
+            height: 50px;
+        }
     }
 }
 
-.main-logo {
-    height: 100px;
-    box-shadow: 4px 4px 4px $color4;
-
+#img-container {
+    margin-top: 100px;
+    min-height: 200px;
+    width: 100%;
+    background-image: url(../img/front.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: fixed;
+    transition: all 2.0s ease-in-out;
+    &.scrolled {
+        background-image: url(../img/front2.jpg);
+    }
 }
 
 #front-page-wrapper {
-    margin-top: 125px;
+    margin-top: 300px;
     min-height: 500px;
     background-color: $color4;
+    position: relative;
+    z-index:2;
+    .info-wrapper {
+        background-color: #fff;
+        width: 400px;
+        padding: 30px;
+        box-shadow: 3px 3px 3px #000;
+
+    }
+
 }
 
 #info-wrapper {
