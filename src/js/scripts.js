@@ -12,11 +12,18 @@ function scrolly() {
         document.getElementById('head-container').className = 'container';
     }
 
-    if(document.body.scrollTop > 700 || document.documentElement.scrollTop > 700) {
+    if(document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        document.getElementById('info-wrapper').className = 'scrolled';
+    } else {
+        document.getElementById('info-wrapper').className = '';
+    }
+
+    if(document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
         document.getElementById('img-container').className = 'scrolled';
     } else {
         document.getElementById('img-container').className = '';
     }
+
 
 }
 

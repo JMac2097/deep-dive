@@ -45,21 +45,40 @@ body {
     background-color: $color4;
     position: relative;
     z-index:2;
-    .info-wrapper {
-        background-color: #fff;
-        width: 400px;
-        padding: 30px;
-        box-shadow: 3px 3px 3px #000;
-
-    }
-
 }
 
 #info-wrapper {
     min-height: 500px;
     background-color: $color2;
+    .info-container {
+        background-color: #fff;
+        width: 400px;
+        padding: 30px;
+        box-shadow: 3px 3px 3px #000;
+        transition: all 2.0s ease-in-out;
+        opacity: 0;
+    }
+    .left {
+        .info-container {
+            float: left;
+            clear: left;
+            transform: translateX(-500px);
+            opacity: 0;
+        }
+    }
+    .right {
+        .info-container {
+            float: right;
+            clear: right;
+            transform: translate(500px); //TODO -- This brings in the scroll bar -- not good
+            opacity: 0;
+        }
+    }
     &.scrolled {
-        background-color: $color4;
+        .info-container {
+            transform: translateX(0);
+            opacity: 1.0;
+        }
     }
 }
 
